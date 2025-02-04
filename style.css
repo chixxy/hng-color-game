@@ -1,0 +1,132 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #d4e3ee;
+}
+
+.game-container {
+  background-color: rgb(187, 111, 123);
+  max-width: 600px;
+  width: 90%;
+  margin-top: 10rem;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.color-box {
+  width: 30%;
+  height: 100px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+}
+
+.color-options {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.color-options button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.instructions,
+.status,
+.score-container {
+  margin-bottom: 10px;
+}
+
+.new-game-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.colorfulText span,
+.instructions span {
+  display: inline-block;
+}
+
+.incorrect-animation {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Tablet and smaller */
+  .game-container {
+    max-width: 500px;
+  }
+
+  .color-box {
+    width: 50%; /* Larger color box on tablet */
+  }
+
+  .color-options {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+  .color-options button {
+    height: 40px; /* Adjust button height for tablet */
+  }
+  .instructions,
+  .status,
+  .score-container,
+  .new-game-button {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 480px) {
+  /* Phone and smaller */
+  .game-container {
+    max-width: 95%; /* Almost full width on phone */
+  }
+
+  .color-box {
+    width: 60%; /* Larger color box on phone */
+  }
+
+  .color-options {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on phone */
+  }
+  .color-options button {
+    font-size: 0.8rem; /* Smaller font on phone */
+    height: 35px; /* Adjust button height for phone */
+  }
+  .instructions,
+  .status,
+  .score-container,
+  .new-game-button {
+    font-size: 1rem;
+  }
+}
