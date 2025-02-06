@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 //getting the letters appear colored
-const kolor = ["red", "blue"];
+const kolor = ["blue"];
 function colorizeText(className, colorArray) {
   const elements = document.querySelectorAll("." + className);
 
